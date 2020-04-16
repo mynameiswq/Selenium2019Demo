@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--thread-count:并发数、parallel:方法/类-->
+        <!--parallel="methods" 或 “classes”，不能为“tests”-->
+<suite name="Default Suite" thread-count="2" parallel="methods">
+    <test name="SeleniumDemo1701">
+        <classes>
+            <class name="day04">
+                <methods>
+                    <!--排除 login方法不运行，其他方法都都运行-->
+                    <exclude name="login"></exclude>
+                </methods>
+
+<!--                <methods>-->
+<!--                    &lt;!&ndash;只运行 login、login02方法，其他方法都bu运行&ndash;&gt;-->
+<!--                    <include name="login"></include>-->
+<!--                    <include name="login02"></include>-->
+<!--                </methods>-->
+            </class>
+
+            <class name="day0402">
+                <methods>
+                <!--排除 login方法不运行，其他方法都都运行-->
+                <exclude name="login"></exclude>
+                </methods>
+
+            </class>
+
+        </classes>
+    </test>
+</suite>
